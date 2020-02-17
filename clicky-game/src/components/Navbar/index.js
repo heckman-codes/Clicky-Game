@@ -3,7 +3,7 @@ import React from "react";
 import "./style.css";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
-function Navbar() {
+function Navbar(props) {
   return (
     <nav className="navbar scoreboard">
       <ul>
@@ -17,8 +17,8 @@ function Navbar() {
           </h2>
         </li>
         <li>
-          Score: 0 | High Score: 0
-          </li>
+          Score: {props.score} | High Score: {props.highscore}
+        </li>
       </ul>
     </nav>
   );
