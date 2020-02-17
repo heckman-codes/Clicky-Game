@@ -8,11 +8,14 @@ function Navbar() {
     <nav className="navbar scoreboard">
       <ul>
         <li>
-          Clicky Game
-          </li>
-        <li>
+          <h2>
+            Clicky Game
+          </h2>
+        </li>
+        <li><h2>
           CORRECT!
-          </li>
+          </h2>
+        </li>
         <li>
           Score: 0 | High Score: 0
           </li>

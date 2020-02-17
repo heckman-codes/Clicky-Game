@@ -18,6 +18,8 @@ li {
 h2 {
   font-weight: bold;
   color: white;
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -32,14 +34,31 @@ h2 {
   padding: none;
 }
 
+
+
 div .card {
   /* background: #fff; */
   /* border-radius: 2px; */
+  height: inherit;
   margin: 1rem;
   /* position: relative; */
   width: 100%;
+  cursor: pointer;
   /* box-shadow: 0 3px 6px #999, 0 3px 6px #999; */
   /* text-align: left; */
+}
+
+.card:hover{
+  transform: scale(1.05);
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: initial;
 }
 
 
@@ -48,6 +67,10 @@ div .card {
   min-height: 10px;
   overflow: hidden;
   padding: .25rem;
+}
+
+.col {
+  padding: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {

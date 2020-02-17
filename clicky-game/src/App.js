@@ -26,11 +26,6 @@ function App() {
           <ImageCard image={images[0].image} />
           <ImageCard image={images[0].image} />
           <ImageCard image={images[0].image} />
-          <ImageCard image={images[0].image} />
-          <ImageCard image={images[0].image} />
-          <ImageCard image={images[0].image} />
-          <ImageCard image={images[0].image} />
-          <ImageCard image={images[0].image} />
         </Wrapper>
         <Footer />
       </div>
