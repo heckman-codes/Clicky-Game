@@ -20,6 +20,7 @@ function Navbar(props) {
           Score: {props.score} | High Score: {props.highscore}
         </li>
       </ul>
+      <div className="rules-div justify-content-center"><p className="text-center rules">Rules are simple: Click a picture you did not pick previously to get points.</p></div>
     </nav>
   );
 }
