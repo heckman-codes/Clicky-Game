@@ -21,9 +21,9 @@ function randomArray(array) {
 
 var score = 0;
 var highscore = 0;
+var message = "Make a Selection";
 
 var randomizedImages = randomArray(images);
-
 var pickedImage = [];
 
 class App extends Component {
@@ -32,16 +32,37 @@ class App extends Component {
     images
   };
 
-  clickImg = () => {
+  clickImg = (id) => {
     randomizedImages = randomArray(images)
-    score += 1;
+    if (pickedImage.includes(id)) {
+      pickedImage = [];
+      score = 0;
+      message = "Incorrect. Start over.";
+      setTimeout(function () {
+        message = "Make another selection."
+      }, 500)
+    } else {
+      score += 1;
+      if (score >= highscore) {
+        highscore = score;
+      }
+      message = "Correct! Score +1";
+      setTimeout(function () {
+        message = "Make another selection."
+      }, 500)
+    }
+
+    pickedImage.push(id);
+
+    console.log(pickedImage);
+    console.log(id)
     this.setState({ images });
   }
 
   render() {
     return (
       <Router>
-        <Navbar score={score} highscore={highscore} />
+        <Navbar message={message} score={score} highscore={highscore} />
         <Wrapper >
           {randomizedImages.map(image => (
             <ImageCard
@@ -49,6 +70,7 @@ class App extends Component {
               id={image.id}
               name={image.name}
               image={image.image}
+              key={image.id}
             />
           ))}
         </Wrapper>

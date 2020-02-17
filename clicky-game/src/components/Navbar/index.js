@@ -13,8 +13,8 @@ function Navbar(props) {
           </h2>
         </li>
         <li><h2>
-          CORRECT!
-          </h2>
+          {props.message}
+        </h2>
         </li>
         <li>
           Score: {props.score} | High Score: {props.highscore}
